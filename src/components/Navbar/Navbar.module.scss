@@ -1,0 +1,76 @@
+@import '../../styles/variables';
+
+.root {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 2% 0%;
+    font-size: calc(#{$size}/1.2);
+    position: absolute;
+    color: $color-light;
+    .navigation {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+
+        a {
+            text-decoration: none;
+            cursor: pointer;
+            color: $color-light;
+            transition: all .3s;
+
+            &:hover {
+                opacity: 0.6;
+            }
+        }
+
+        .active_link {
+            color: $color-yellow;
+            border-bottom: 2px solid $color-yellow;
+            pointer-events: none;
+        }
+    }
+    .language_block {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+
+        a {
+            text-decoration: none;
+            cursor: pointer;
+            color: $color-light;
+            transition: all .3s;
+
+            &:hover {
+                opacity: 0.6;
+            }
+        }
+        .active_lang {
+            color: $color-yellow;
+            pointer-events: none;
+        }
+    }
+    .language_block_0 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        opacity: 0;
+
+        a {
+            pointer-events: none;
+        }
+    }
+}
+@media screen and (max-width: 500px) {
+    .root {
+        font-size: calc(#{$size}*1.2) !important;
+
+        .language_block_0 {
+            display: none !important;
+        }
+    }
+}

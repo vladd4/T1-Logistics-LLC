@@ -1,0 +1,163 @@
+@import '../../styles/variables';
+
+.root {
+    display: grid;
+    place-items: center;
+    background-color: $color-light;
+    padding: 2% 0%;
+    overflow: hidden;
+
+    .article_block {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 2% 0%;
+
+        .main_image {
+            width: 45%;
+            border-radius: 20px;
+        }
+        .text_block {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            max-width: 40%;
+
+            div {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 2%;
+
+                .icon {
+                    width: 15%;
+                }
+                h3 {
+                    font-size: calc(#{$size});
+                    font-weight: 600;
+                    color: $color-dark;
+                }
+            }
+            p {
+                font-size: calc(#{$size}/1.2);
+                text-align: left;
+                color: $color-dark;
+            }
+            .button {
+                color: $color-dark;
+                border: none;
+                border-radius: 12px;
+                background-color: $color-yellow;
+                padding: 2.5% 7%;
+                text-decoration: none;
+                text-align: center;
+                font-size: calc(#{$size}/1.2);
+                transition: all .3s;
+                width: 40%;
+                cursor: pointer;
+
+                &:hover {
+                    opacity: 0.6;
+                }
+            }
+        }
+    }
+}
+.root_left {
+    display: grid;
+    place-items: center;
+    background-color: $color-middle;
+    padding: 2% 0%;
+    overflow: hidden;
+
+    .article_block {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: row-reverse;
+        padding: 2% 0%;
+
+        .main_image {
+            width: 45%;
+            border-radius: 20px;
+        }
+        .text_block {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            max-width: 40%;
+
+            div {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 2%;
+
+                .icon {
+                    width: 15%;
+                }
+                h3 {
+                    font-size: calc(#{$size});
+                    font-weight: 600;
+                    color: $color-light;
+                }
+            }
+            p {
+                font-size: calc(#{$size}/1.2);
+                text-align: left;
+                color: $color-light;
+            }
+            .button {
+                color: $color-light;
+                border: none;
+                border-radius: 12px;
+                background-color: $color-dark;
+                padding: 2.5% 7%;
+                font-size: calc(#{$size}/1.2);
+                transition: all .3s;
+                cursor: pointer;
+                width: 40%;
+                text-decoration: none;
+                text-align: center;
+
+                &:hover {
+                    opacity: 0.6;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 630px) {
+    .button {
+        width: 50% !important;
+    }
+}
+@media screen and (max-width: 500px) {
+    .article_block {
+        flex-direction: column !important;
+        gap: 10px !important;
+        .main_image {
+            width: 90% !important;
+        }
+        .text_block {
+            max-width: 90% !important;
+
+            div {
+                .icon {
+                    width: 10% !important;
+                }
+                h3 {
+                    font-size: calc(#{$size}*1.5) !important;
+                }
+            }
+            p {
+                font-size: calc(#{$size}*1.2) !important;
+            }
+            .button {
+                font-size: calc(#{$size}*1.2) !important;
+            }
+        }
+    }
+}
